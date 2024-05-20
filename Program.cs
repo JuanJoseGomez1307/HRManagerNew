@@ -1,3 +1,6 @@
+using HRManagerNew.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace HRManagerNew
 {
     public class Program
@@ -8,6 +11,10 @@ namespace HRManagerNew
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            builder.Services.AddDbContext<HRManagerNewContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("HRManagerNewDB"))
+            );
 
             var app = builder.Build();
 
