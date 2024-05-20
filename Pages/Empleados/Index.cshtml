@@ -1,0 +1,80 @@
+﻿@page
+@model HRManagerNew.Pages.Empleados.IndexModel
+@{
+    ViewData["Tittle"] = "Index Empleados";
+}
+<h1>Index Empleados</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].FechaContratacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].DepartamentoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].CargoId)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Empleados)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaContratacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartamentoId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CargoId)
+                </td>
+                <td>
+                    <span></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
