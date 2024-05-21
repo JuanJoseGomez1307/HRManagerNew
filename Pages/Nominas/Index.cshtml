@@ -1,0 +1,56 @@
+﻿@page
+@model HRManagerNew.Pages.Nominas.IndexModel
+@{
+    ViewData["Tittle"] = "Index Nominas";
+}
+<h1>Index Nominas</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nominas[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nominas[0].PeriodoInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nominas[0].PeriodoFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nominas[0].TotalPagado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nominas[0].EmpleadoId)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Nominas)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeriodoInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeriodoFin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPagado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmpleadoId)
+                </td>
+                <td>
+                    <span></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
