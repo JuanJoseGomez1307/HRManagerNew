@@ -1,0 +1,38 @@
+﻿@page
+@model HRManagerNew.Pages.Users.IndexModel
+@{
+    ViewData["Tittle"] = "Index Users";
+}
+<h1>Index Users</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].Password)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Users)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
