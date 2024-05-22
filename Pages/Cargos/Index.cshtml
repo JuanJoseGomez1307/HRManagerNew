@@ -1,0 +1,59 @@
+﻿@page
+@model HRManagerNew.Pages.Cargos.IndexModel
+@{
+    ViewData["Title"] = "Index Cargos";
+}
+<h1>Index Cargos</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Cargos[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargos[0].TituloCargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargos[0].Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargos[0].Empleado)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Cargos)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TituloCargo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empleado)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+                <td>
+                    <span></span>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
