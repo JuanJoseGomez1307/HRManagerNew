@@ -16,6 +16,6 @@ namespace HRManagerNew.Models
         public decimal TotalPagado { get; set; }
 
         public int EmpleadoId { get; set; }
-        public Empleado Empleado { get; set; }
+        public Empleado? Empleado { get; set; } = default!;
     }
 }
