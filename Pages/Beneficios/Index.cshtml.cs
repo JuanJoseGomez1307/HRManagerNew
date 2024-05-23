@@ -1,11 +1,13 @@
 using HRManagerNew.Data;
 using HRManagerNew.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace HRManagerNew.Pages.Beneficios
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly HRManagerNewContext _context;
